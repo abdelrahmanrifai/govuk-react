@@ -16,5 +16,6 @@ export TabsTitle from './TabsTitle';
  *
  * ### References:
  * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/tabs
+ * - https://design-system.service.gov.uk/components/tabs/
  *
  */

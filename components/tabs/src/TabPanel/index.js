@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { GREY_2 } from 'govuk-colours';
 import { MEDIA_QUERIES, SPACING, SPACING_MAP } from '@govuk-react/constants';
 
@@ -16,6 +17,16 @@ const TabPanel = styled('section')({
       marginBottom: 0,
     },
   },
-});
+},
+({ isActive }) => ({
+  display: 'block',
+  [MEDIA_QUERIES.TABLET]: {
+    display: !isActive && 'none',
+  },
+}));
+
+TabPanel.PropTypes = {
+  isActive: PropTypes.bool.isRequired,
+}
 
 export default TabPanel;
